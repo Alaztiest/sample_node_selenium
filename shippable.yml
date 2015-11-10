@@ -10,5 +10,7 @@ services:
   - selenium
 
 before_script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
   - "export DISPLAY=:99.0"
   - "/etc/init.d/xvfb start"
