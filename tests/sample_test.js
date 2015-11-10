@@ -1,9 +1,11 @@
 module.exports = {
   "test sample" : function (browser) {
     browser
-      .url("http://127.0.0.1:1337")
+      .url("http://cyberspaced.tayloredtechnology.net/wp-admin/")
       .waitForElementVisible('body', 1000)
-      .assert.containsText('body', 'Hello World')
+      .setValue('input[id="user_login"]', 'nightwatch')
+      .setValue('input[id="user_pass"]', 'nightwatch')
+      .assert.containsText('input[id="user_login"]', 'nightwatch')
       .end();
   }
 };
